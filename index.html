@@ -75,6 +75,30 @@
                       <li><a href="shop-wishlist.html">Shop Wishlist</a></li>
                     </ul> -->
                   </li>
+                  <li class="countdown-nav-item">
+                    <div class="header-countdown">
+                        <div class="countdown-box1">
+                            <span id="days-header" class="countdown-value1">00</span>
+                            
+                            <span class="countdown-label1">Jours</span>
+                        </div>
+                        <div class="countdown-box1">
+                            <span id="hours-header" class="countdown-value1">00</span>
+                          
+                            <span class="countdown-label1">Heures</span>
+                        </div>
+                        <div class="countdown-box1">
+                            <span id="minutes-header" class="countdown-value1">00</span>
+                           
+                            <span class="countdown-label1">Minutes</span>
+                        </div>
+                        <div class="countdown-box1">
+                            <span id="seconds-header" class="countdown-value1">00</span>
+                      
+                            <span class="countdown-label1">Secondes</span>
+                        </div>
+                    </div>
+                </li>
                   <!-- <li class="has-children"><a href="shop-vendor-list.html">Vendors</a>
                     <ul class="sub-menu">
                       <li><a href="shop-vendor-list.html">Vendors Listing</a></li>
@@ -107,6 +131,11 @@
                 </ul> -->
               </nav>
               <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
+            
+             
+            </div>
+            
+            
             </div>
             <div class="header-shop">
               <div class="d-inline-block box-dropdown-cart"><span class="font-lg icon-list icon-account"><span>Account</span></span>
@@ -411,6 +440,7 @@
                   <li class=""><a href="shop-grid.html">Marché</a>
                    
                   </li>
+
                   <li class="has-children"><a href="shop-vendor-list.html">Vendors</a>
                     <ul class="sub-menu">
                       <li><a href="shop-vendor-list.html">Vendors Listing</a></li>
@@ -477,7 +507,13 @@
     padding: 27px 60px 25px 60px;
 
 }
-  
+
+.header-countdown {
+        display: flex;
+        gap: 10px; /* Espacement entre les boîtes */
+        align-items: center;
+    }
+
       .countdown-container {
           display: flex;
           justify-content: center;
@@ -507,7 +543,71 @@
           color: #ccc; /* Couleur de la police */
       }
   </style>
-  
+  <style>
+    .header-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-main-menu {
+        flex: 1;
+    }
+
+    .main-menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-menu li {
+        margin-right: 20px; /* Espacement entre les éléments du menu */
+    }
+
+    .header-countdown {
+        display: flex;
+        gap: 10px; /* Espacement entre les boîtes */
+        align-items: center;
+    }
+
+    .countdown-nav-item1 {
+        display: flex;
+        align-items: center;
+    }
+
+    .countdown-box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #007bff; /* Couleur de fond du bouton */
+        color: white; /* Couleur du texte */
+        padding: 5px;
+        border-radius: 5px; /* Coins arrondis */
+        text-align: center;
+        font-size: 0.8em; /* Taille de la police */
+        cursor: pointer; /* Curseur de pointeur */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Effets de transition */
+    }
+
+    .countdown-box1:hover {
+        background-color: #0056b3; /* Couleur de fond au survol */
+        transform: scale(1.05); /* Agrandissement léger au survol */
+    }
+
+    .countdown-value1 {
+        display: block;
+        font-size: 1.2em; /* Taille de la police pour les valeurs */
+        font-weight: bold;
+    }
+
+    .countdown-label1 {
+        display: block;
+        font-size: 0.8em; /* Taille de la police pour les labels */
+        color: #e0e0e0; /* Couleur des labels */
+    }
+</style>
   
   
   
@@ -585,6 +685,46 @@
               </div>
           </div>
       </div>
+      
+
+      <script>
+        // Date cible (modifie la date et l'heure selon tes besoins)
+        const targetDates = new Date("2024-09-30T00:00:00").getTime();
+    
+        // Fonction pour mettre à jour le compte à rebours
+        const countdownFunctions = () => {
+            const now = new Date().getTime();
+            const distance = targetDates - now;
+    
+            // Calcul des jours, heures, minutes et secondes
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Afficher les résultats dans les éléments correspondants
+            document.getElementById("days-header").innerHTML = days;
+            document.getElementById("hours-header").innerHTML = hours;
+            document.getElementById("minutes-header").innerHTML = minutes;
+            document.getElementById("seconds-header").innerHTML = seconds;
+    
+            // Si le compte à rebours est terminé
+            if (distance < 0) {
+                clearInterval(intervals);
+                document.getElementById("days-header").innerHTML = "00";
+                document.getElementById("hours-header").innerHTML = "00";
+                document.getElementById("minutes-header").innerHTML = "00";
+                document.getElementById("seconds-header").innerHTML = "00";
+            }
+        };
+    
+        // Mettre à jour le compte à rebours chaque seconde
+        const intervals = setInterval(countdownFunctions, 1000);
+    </script>
+    
+
+
+
       <script>
         // Date cible (modifie la date et l'heure selon tes besoins)
         const targetDate = new Date("2024-09-30T00:00:00").getTime();
