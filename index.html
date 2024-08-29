@@ -472,82 +472,155 @@
         </div>
       </div>
     </div>
+    <style>
+      .banner-hero.banner-1 .banner-big.banner-big-2 {
+    padding: 27px 60px 25px 60px;
+
+}
+  
+      .countdown-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px; /* Espacement entre les boîtes */
+          width: 100%;
+      }
+  
+      .countdown-box {
+          text-align: center;
+          background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+          color: white;
+          padding: 20px;
+          border-radius: 10px; /* Coins arrondis */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+      }
+  
+      .countdown-value {
+          display: block;
+          font-size: 3em; /* Taille de la police */
+          font-weight: bold;
+      }
+  
+      .countdown-label {
+          display: block;
+          font-size: 0.9em;
+          color: #ccc; /* Couleur de la police */
+      }
+  </style>
+  
+  
+  
+  
     <main class="main">
       <section class="section-box">
         <div class="banner-hero banner-1">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-7">
-                <div class="box-swiper">
-                  <div class="swiper-container swiper-group-1">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="banner-big banner-big-2 bg-15" style="background-image: url(assets/imgs/page/homepage2/bg-slide.png)"><span class="saleoff">-25%</span><span class="font-sm text-uppercase label-green">new arrival</span>
-                          <h2 class="mt-10 color-white">Fly More Combo</h2>
-                          <h1 class="color-white lh-65">DJI Mavic Air</h1>
-                          <div class="row">
-                            <div class="col-lg-5 col-md-7 col-sm-12">
-                              <ul class="list-disc">
-                                <li class="font-sm color-white">SmartCapture</li>
-                                <li class="font-sm color-white">21-Minute Flight Time</li>
-                                <li class="font-sm color-white">Advanced Pilot Assistance System</li>
-                              </ul>
-                            </div>
+              <div class="row">
+                  <div class="col-lg-7">
+                      <div class="box-swiper">
+                          <div class="swiper-container">
+                              <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="banner-big banner-big-2 bg-15 countdown-container" id="countdown">
+                                      <div class="countdown-box">
+                                          <span id="days" class="countdown-value">00</span>
+                                          <br>
+                                          <span class="countdown-label">Days</span>
+                                      </div>
+                                      <div class="countdown-box">
+                                          <span id="hours" class="countdown-value">00</span>
+                                          <br>
+                                          <span class="countdown-label">Hours</span>
+                                      </div>
+                                      <div class="countdown-box">
+                                          <span id="minutes" class="countdown-value">00</span>
+                                          <br>
+                                          <span class="countdown-label">Minutes</span>
+                                      </div>
+                                      <div class="countdown-box">
+                                          <span id="seconds" class="countdown-value">00</span>
+                                          <br>
+                                          <span class="countdown-label">Seconds</span>
+                                      </div>
+                                  </div>
+                                  
+                                  </div>
+                              </div>
                           </div>
-                          <div class="mt-30"><a class="btn btn-brand-2 btn-gray-1000" href="shop-grid.html">Shop now</a><a class="btn btn-link btn-link-white" href="shop-grid.html">Learn more</a></div>
-                        </div>
                       </div>
-                      <div class="swiper-slide">
-                        <div class="banner-big banner-big-2 bg-15" style="background-image: url(assets/imgs/page/homepage2/bg-slide-2.png)"><span class="saleoff">-25%</span><span class="font-sm text-uppercase label-green">Best Sale</span>
-                          <h2 class="mt-10 color-white">Omos Mobile</h2>
-                          <h1 class="color-white lh-65">KMSZ 14 2022</h1>
-                          <div class="row">
-                            <div class="col-lg-5 col-md-7 col-sm-12">
-                              <ul class="list-disc">
-                                <li class="font-sm color-white">6.8" WQHD+ Edge Screen.</li>
-                                <li class="font-sm color-white">5,000mAh (45W Charging)</li>
-                                <li class="font-sm color-white">8GB RAM | 128GB Storage</li>
-                              </ul>
-                            </div>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="row">
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="banner-small banner-laptop bg-16 text-center">
+                                  <span class="color-brand-3 font-md">New Arrivals</span>
+                                  <h4 class="mb-10 color-gray-1000">Tables Collection</h4>
+                              </div>
                           </div>
-                          <div class="mt-30"><a class="btn btn-brand-2 btn-gray-1000" href="shop-grid.html">Shop now</a><a class="btn btn-link btn-link-white" href="shop-grid.html">Learn more</a></div>
-                        </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="banner-small banner-player bg-17">
+                                  <h6 class="mb-10 color-gray-1000">Xbox Core Wireless Controller</h6>
+                                  <p class="color-brand-1 font-sm">Aqua Shift<br> Special Edition</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="banner-small banner-apple bg-2 text-center">
+                                  <h4 class="mb-0 color-gray-1000">Apple Days</h4>
+                                  <span class="color-brand-3 font-md">Hot devices, Latest trending</span>
+                                  <div class="mt-0">
+                                      <a class="btn btn-link-orange" href="shop-grid.html">Shop Now</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                              <div class="banner-small banner-samsung bg-4">
+                                  <span class="color-brand-3 font-md">New Arrivals</span>
+                                  <h4 class="mb-10 color-gray-1000">Samsung 2022 Led TV
+                                      <span class="color-brand-3 font-md">Special sale</span>
+                                  </h4>
+                              </div>
+                          </div>
                       </div>
-                
-                    </div>
-                    <div class="swiper-pagination swiper-pagination-1"></div>
                   </div>
-                </div>
               </div>
-              <div class="col-lg-5">
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                    <div class="banner-small banner-laptop bg-16 text-center"><span class="color-brand-3 font-md">New Arrivals</span>
-                      <h4 class="mb-10 color-gray-1000">Tables Collection</h4>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                    <div class="banner-small banner-player bg-17">
-                      <h6 class="mb-10 color-gray-1000">Xbox Core Wireless Controller</h6>
-                      <p class="color-brand-1 font-sm">Aqua Shift<br> Special Edition</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                    <div class="banner-small banner-apple bg-2 text-center">
-                      <h4 class="mb-0 color-gray-1000">Apple Days</h4><span class="color-brand-3 font-md">Hot devices, Latest trending</span>
-                      <div class="mt-0"><a class="btn btn-link-orange" href="shop-grid.html">Shop Now</a></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                    <div class="banner-small banner-samsung bg-4"><span class="color-brand-3 font-md">New Arrivals</span>
-                      <h4 class="mb-10 color-gray-1000">Samsung 2022 Led TV<span class="color-brand-3 font-md">Special sale</span></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
+      </div>
+      <script>
+        // Date cible (modifie la date et l'heure selon tes besoins)
+        const targetDate = new Date("2024-09-30T00:00:00").getTime();
+    
+        // Fonction pour mettre à jour le compte à rebours
+        const countdownFunction = () => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+    
+            // Calcul des jours, heures, minutes et secondes
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Afficher les résultats dans les éléments correspondants
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+    
+            // Si le compte à rebours est terminé
+            if (distance < 0) {
+                clearInterval(interval);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        };
+    
+        // Mettre à jour le compte à rebours chaque seconde
+        const interval = setInterval(countdownFunction, 1000);
+    </script>
+    
+    
       </section>
       <!-- <div class="section-box">
         <div class="container">
